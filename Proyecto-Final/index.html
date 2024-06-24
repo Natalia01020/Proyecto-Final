@@ -25,11 +25,11 @@
             <p>Herramientas online gratuitas relacionadas a finanzas personales e inversión.</p>
         </section>        
         <div class="opciones">
-            <div>Ahorro</div>
+            <div><a href="#Ahorros">Ahorro</a></div>
             <div>Presupuesto Mensual</div>
             <div>EVA</div>
             <div>ROI</div>
-        </section>
+        </div>
         <section>
             <h2>Importancia:</h2>
             <p>Tener un sitio web con calculadoras financieras para ahorrar, presupuesto mensual, EVA (Valor Económico Agregado) y ROI (Retorno sobre la Inversión) es crucial para individuos y empresas que buscan una gestión financiera eficiente y estratégica. Estas herramientas proporcionan una forma accesible y precisa de evaluar la salud financiera, planificar gastos, optimizar inversiones y medir el rendimiento económico. Al facilitar la toma de decisiones informadas, las calculadoras financieras ayudan a alcanzar metas económicas, maximizar beneficios y asegurar un uso responsable de los recursos financieros</p>
@@ -37,19 +37,43 @@
         <div class="calculadora">
             <h2>Ahorro</h2>
             <div>
-                <form>
+                <form id="Ahorros">
                     <fieldset>
                         <legend>¿Cuánto quieres ahorrar?</legend>
                     <br/>
                     
+                        <label for="Cantidadinicial">Cantidad inicial:</label>
+                        <input type="number" id="Cantidadinicial" name="Cantidadinicial" required>
+                        
+                        <label for="Aportemensual">Aporte mensual:</label>
+                        <input type="number" id="Aportemensual" name="Aportemensual" required>
+                        
+                        <label for="Tasadeinteres">Tasa de interés anual (%):</label>
+                        <input type="number" id="Tasadeinteres" name="Tasadeinteres" step="0.01" required>
+                        
+                        <label for="tiempo">Número de años:</label>
+                        <input type="number" id="tiempo" name="tiempo" required>
+                        
+                        <button type="button" onclick="CalcularAhorros()">Calcular</button>                  
                     </fieldset>
                 </form>
             </div>
             <div>
-                <p>Resultado:</p>
+                <p id="resultado1">Resultado:</p>
             </div>
             <div>
-                <p>Notas:</p>
+                <h3>Notas:</h3>
+                <p>La calculadora de ahorro que he diseñado es una herramienta en línea que te ayuda a estimar cuánto dinero podrás ahorrar a lo largo del tiempo, basado en tu aporte mensual y la tasa de interés anual esperada. Aquí te dejo una descripción detallada de su funcionamiento y cómo usarla:</p>
+                <h3>Instrucciones:</h3>   
+                <p>
+                    <ol>
+                        <li><b>Cantidad Inicial:</b> Ingresa la cantidad de dinero que tienes actualmente ahorrada.</li>
+                        <li><b>Aporte Mensual:</b>Ingresa el monto que puedes ahorrar cada mes de manera consistente.</li>
+                        <li><b>Tasa de Interés Anual (%):</b> Ingresa la tasa de interés anual en porcentaje que tu banco o institución financiera te ofrece por tus ahorros.</li>
+                        <li><b>Número de Años:</b> Ingresa el número de años que planeas seguir con tus ahorros.</li>
+                    </ol>
+
+                </p> 
             </div>
         </div>
 
@@ -107,7 +131,7 @@
         </div>
 
     </main>
-    
+    <script src="script.js"></script>
 </body>
 
 <footer>
