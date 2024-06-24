@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav>
-            <img src="imagen1.png" alt="Logo de YoAhorrador"></img>
+            <img src="imagen1.png" alt="Logo de YoAhorrador">
             <h1>YoAhorrador</h1>
             <ul type="none">
                 <li><a href="#contacto" target="_blank"><b>Contáctame</b></a></li>
@@ -26,9 +26,9 @@
         </section>        
         <div class="opciones">
             <div><a href="#Ahorros">Ahorro</a></div>
-            <div>Presupuesto Mensual</div>
-            <div>EVA</div>
-            <div>ROI</div>
+            <div><a href="#presupuesto">Presupuesto Mensual</a></div>
+            <div><a href="#eva">EVA</a></div>
+            <div><a href="#roiCalculator">ROI</a></div>
         </div>
         <section>
             <h2>Importancia:</h2>
@@ -53,6 +53,9 @@
                         
                         <label for="tiempo">Número de años:</label>
                         <input type="number" id="tiempo" name="tiempo" required>
+
+                        <label for="resetear"></label>
+                        <input type="reset" name="resetear" id="resetear" value="Resetear">
                         
                         <button type="button" onclick="CalcularAhorros()">Calcular</button>                  
                     </fieldset>
@@ -80,53 +83,129 @@
         <div class="calculadora">
             <h2>Presupuesto</h2>
             <div>
-                <form>
+                <form id="presupuesto">
                     <fieldset>
                         <legend>Vamos a planear los gastos del próximo mes</legend>
                         <br/>
+                        <label for="ingresos">Ingresos mensuales:</label>
+                        <input type="number" id="ingresos" name="ingresos" required>
+
+                        <label for="alquiler">Gasto en alquiler/hipoteca:</label>
+                        <input type="number" id="alquiler" name="alquiler" required>
+
+                        <label for="comida">Gasto en comida:</label>
+                        <input type="number" id="comida" name="comida" required>
+
+                        <label for="transporte">Gasto en transporte:</label>
+                        <input type="number" id="transporte" name="transporte" required>
+
+                        <label for="entretenimiento">Gasto en entretenimiento:</label>
+                        <input type="number" id="entretenimiento" name="entretenimiento" required>
+
+                        <label for="otros">Otros gastos:</label>
+                        <input type="number" id="otros" name="otros" required>
+
+                        <label for="resetear"></label>
+                        <input type="reset" name="resetear" id="resetear" value="Resetear">
+
+                        <button type="button" onclick="CalcularPresupuesto()">Calcular</button>
                     </fieldset>
                 </form>
             </div>
             <div>
-                <p>Resultado:</p>
+                <p id="resultadoPresupuesto">Resultado:</p>
             </div>
             <div>
-                <p>Notas:</p>
+                <h3>Notas:</h3>
+                <p>Esta calculadora te permite ingresar tus ingresos mensuales y los gastos en diferentes categorías (alquiler, comida, transporte, entretenimiento y otros gastos). Una vez que ingreses toda la información requerida, puedes presionar el botón "Calcular" para ver el saldo neto al final del mes, es decir, cuánto dinero te queda después de restar todos tus gastos de tus ingresos.</p>
+                <h3>Instrucciones:</h3>
+                <p>
+                    <ol>
+                        <li><b>Ingresos mensuales:</b> La cantidad total de dinero que recibes al mes.</li>
+                        <li><b>Gasto en alquiler/hipoteca:</b> El monto que pagas mensualmente por tu vivienda.</li>
+                        <li><b>Gasto en comida:</b> Los gastos mensuales en alimentos.</li>
+                        <li><b>Gasto en transporte:</b> Los costos mensuales asociados con el transporte.</li>
+                        <li><b>Gasto en entretenimiento:</b> El dinero gastado en actividades recreativas.</li>
+                        <li><b>Otros gastos:</b> Cualquier otro gasto mensual que tengas.</li>
+                    </ol>
+                </p>
             </div>
         </div>
 
         <div class="calculadora">
-            <h2>EVA</h2>
+            <h2>Calculadora EVA</h2>
             <div>
-                <form>
+                <form id="eva">
                     <fieldset>
-                        <legend>Calculemos el valor agregado de su inversión</legend>
+                        <legend>Calculemos el valor agregado de su inversión (EVA)</legend>
                         <br/>
+                        <label for="nopat">Utilidad Neta Operativa Después de Impuestos:</label>
+                <input type="number" id="nopat" name="nopat" required>
+
+                <label for="capitalInvertido">Capital Invertido:</label>
+                <input type="number" id="capitalInvertido" name="capitalInvertido" required>
+
+                <label for="costoCapital">Costo de Capital (%):</label>
+                <input type="number" id="costoCapital" name="costoCapital" step="0.01" required>
+
+                <label for="resetear"></label>
+                <input type="reset" name="resetear" id="resetear" value="Resetear">
+
+                <button type="button" onclick="calcularEVA()">Calcular</button>
                     </fieldset>
                 </form>
             </div>
             <div>
-                <p>Resultado:</p>
+                <p id="resultadoEVA">Resultado EVA:</p>
             </div>
             <div>
-                <p>Notas:</p>
+                <h3>Notas:</h3>
+                <p>La Calculadora de Valor Económico Agregado (EVA) te ayuda a medir la rentabilidad de tu inversión. Ingresa la Utilidad Neta Operativa Después de Impuestos (NOPAT), el Capital Invertido y el Costo de Capital para obtener el EVA. Este indicador te muestra cuánto valor añadido genera tu inversión después de cubrir el costo del capital.</p>
+                <h3>Instrucciones:</h3>
+                <p>
+                    <ol>
+                        <li><b>Utilidad Neta Operativa Después de Impuestos (NOPAT): </b>Ingresa la ganancia neta de tu inversión después de pagar los impuestos.</li>
+                        <li><b>Capital Invertido: </b>Indica cuánto dinero has invertido en tu proyecto o negocio.</li>
+                        <li><b>Costo de Capital (%): </b>Especifica el porcentaje que tu inversión debe superar para ser rentable.</li>
+                    </ol>
+                </p>
             </div>
         </div>
 
         <div class="calculadora">
             <h2>ROI</h2>
             <div>
-                <form>
+                <form id="roiCalculator">
                     <fieldset>
                         <legend>Hallemos el retorno sobre la inversión de su próximo negocio</legend>
+                        <br/>
+                        <label for="costoInversion">Costo de la inversión:</label>
+                        <input type="number" id="costoInversion" name="costoInversion" required>
+
+                        <label for="ganancia">Ganancia obtenida:</label>
+                        <input type="number" id="ganancia" name="ganancia" required>
+
+                        <label for="resetear"></label>
+                        <input type="reset" name="resetear" id="resetear" value="Resetear">
+
+                        <button type="button" onclick="calcularROI()">Calcular</button>
                     </fieldset>
                 </form>
             </div>
             <div>
-                <p>Resultado:</p>
+                <p id="resultadoROI">Resultado:</p>
             </div>
             <div>
-                <p>Notas:</p>
+                <h3>Notas:</h3>
+                <p>La calculadora de ROI te ayuda a saber cuánto dinero has ganado en relación con lo que inicialmente invertiste. Es una forma simple de medir si una inversión ha sido rentable o no. Un ROI positivo significa que ganaste más de lo que invertiste, mientras que un ROI negativo indica que la inversión no fue rentable.</p>
+                <h3>Instrucciones:</h3>    
+                <p>
+                    <ol>
+                        <li><b>Costo de la inversión: </b>Ingresa el monto total que invertiste inicialmente.</li>
+                        <li><b>Ganancia obtenida: </b>Ingresa el beneficio total que has obtenido de la inversión.</li>
+                        <li>Haz clic en el botón <b>"Calcular"</b> para obtener el ROI, que se mostrará como un porcentaje.</li>
+                    </ol>
+                </p>
             </div>
         </div>
 
