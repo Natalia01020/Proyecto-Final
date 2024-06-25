@@ -11,8 +11,10 @@
 <body>
     <header>
         <nav>
+            <div id="logotipo">
             <img src="imagen1.png" alt="Logo de YoAhorrador">
             <h1>YoAhorrador</h1>
+            </div>
             <ul type="none">
                 <li><a href="#contacto" target="_blank"><b>Contáctame</b></a></li>
                 <li><a href="https://www.youtube.com/@YoAhorradorLatam" target="_blank"><b>+ info</b></a></li>
@@ -30,7 +32,7 @@
             <div><a href="#eva">EVA</a></div>
             <div><a href="#roiCalculator">ROI</a></div>
         </div>
-        <section>
+        <section id="importancia">
             <h2>Importancia:</h2>
             <p>Tener un sitio web con calculadoras financieras para ahorrar, presupuesto mensual, EVA (Valor Económico Agregado) y ROI (Retorno sobre la Inversión) es crucial para individuos y empresas que buscan una gestión financiera eficiente y estratégica. Estas herramientas proporcionan una forma accesible y precisa de evaluar la salud financiera, planificar gastos, optimizar inversiones y medir el rendimiento económico. Al facilitar la toma de decisiones informadas, las calculadoras financieras ayudan a alcanzar metas económicas, maximizar beneficios y asegurar un uso responsable de los recursos financieros</p>
         </section>
@@ -44,18 +46,28 @@
                     
                         <label for="Cantidadinicial">Cantidad inicial:</label>
                         <input type="number" id="Cantidadinicial" name="Cantidadinicial" required>
+                        <br/>
+                        <br/>
                         
                         <label for="Aportemensual">Aporte mensual:</label>
                         <input type="number" id="Aportemensual" name="Aportemensual" required>
+                        <br/>
+                        <br/>
                         
                         <label for="Tasadeinteres">Tasa de interés anual (%):</label>
                         <input type="number" id="Tasadeinteres" name="Tasadeinteres" step="0.01" required>
+                        <br/>
+                        <br/>
                         
                         <label for="tiempo">Número de años:</label>
                         <input type="number" id="tiempo" name="tiempo" required>
+                        <br/>
+                        <br/>
 
                         <label for="resetear"></label>
                         <input type="reset" name="resetear" id="resetear" value="Resetear">
+                        <br/>
+                        <br/>
                         
                         <button type="button" onclick="CalcularAhorros()">Calcular</button>                  
                     </fieldset>
