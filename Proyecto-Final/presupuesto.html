@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presupuesto</title>
     <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="hover-min.css">
 </head>
 <body>
     <header>
@@ -12,11 +13,11 @@
             <a href="index.html"><img src="imagen1.png" alt="Logo de YoAhorrador"></a>
         </nav>
     </header>
-    
+
     <h2>Calculadora de Presupuesto</h2>
 
     <div class="calculadora">
-        <div>
+        <div class="hvr-ripple-out">
             <h3>Notas:</h3>
             <p>Esta calculadora te permite ingresar tus ingresos mensuales y los gastos en diferentes categorías (alquiler, comida, transporte, entretenimiento y otros gastos). Una vez que ingreses toda la información requerida, puedes presionar el botón "Calcular" para ver el saldo neto al final del mes, es decir, cuánto dinero te queda después de restar todos tus gastos de tus ingresos.</p>
         </div>
@@ -70,11 +71,11 @@
                     <br/>
     
                     <label for="resetear"></label>
-                    <input type="reset" name="resetear" id="resetear" value="Resetear">
+                    <input type="reset" name="resetear" id="resetear" value="Resetear" class="hvr-shrink">
                     <br/>
                     <br/>
     
-                    <button type="button" onclick="CalcularPresupuesto()">Calcular</button>
+                    <button type="button" onclick="CalcularPresupuesto()" class="hvr-grow">Calcular</button>
                 </fieldset>
             </form>
         </div>  

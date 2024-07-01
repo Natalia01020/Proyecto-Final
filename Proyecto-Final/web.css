@@ -67,6 +67,14 @@ main{
     background: rgb(7,7,7);
     background: linear-gradient(90deg, rgba(7,7,7,1) 44%, rgba(22,22,22,1) 100%);
     color: white;
+    animation: fade-in 5s ;
+}
+@keyframes fade-in {
+    0% {opacity: 0; width: 100%; }
+    25% {opacity:1; width: 120%; }
+    50% {opacity:1; width: 120%;}
+    75% {opacity: 1; width: 120%;} 
+    100% { opacity: 1; width: 100%;}
 }
 
 .opciones{
@@ -89,8 +97,14 @@ div a:hover {
 }
 
 #importancia{
-    padding: 2.5%;
+    padding: 1%;
     text-align: center;
+    margin-top:20px;
+}
+
+#importancia:hover{
+    background-color: black;
+    color: white;
 }
 
 h2{
@@ -113,6 +127,10 @@ h2{
     margin: 20px;
 }
 
+ol{
+    text-align: left;
+}
+
 #Ahorros,
 #presupuesto,
 #eva,
@@ -132,8 +150,11 @@ form button{
 #resultadoROI,
 #resultadoEVA{
     text-align: center;
-    padding-top:40px;
+    padding-top:30px;
     font-size: 30px;
+    background-color: green;
+    margin:0 10%;
+    border-radius: 25px;
 }
 
 footer{

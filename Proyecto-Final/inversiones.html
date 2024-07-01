@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inversiones</title>
     <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="hover-min.css">
 </head>
 <body>
     <header>
@@ -17,7 +18,7 @@
 
     <h2>Calculadora EVA</h2>
     <div class="calculadora">
-        <div>
+        <div class="hvr-ripple-out">
             <h3>Notas:</h3>
             <p>La Calculadora de Valor Económico Agregado (EVA) te ayuda a medir la rentabilidad de tu inversión. Ingresa la Utilidad Neta Operativa Después de Impuestos (NOPAT), el Capital Invertido y el Costo de Capital para obtener el EVA. Este indicador te muestra cuánto valor añadido genera tu inversión después de cubrir el costo del capital.</p>
         </div>
@@ -53,11 +54,11 @@
             <br/>
 
             <label for="resetear"></label>
-            <input type="reset" name="resetear" id="resetear" value="Resetear">
+            <input type="reset" name="resetear" id="resetear" value="Resetear" class="hvr-shrink">
             <br/>
             <br/>
 
-            <button type="button" onclick="calcularEVA()">Calcular</button>
+            <button type="button" onclick="calcularEVA()" class="hvr-grow">Calcular</button>
                 </fieldset>
             </form>
         </div>       
@@ -69,7 +70,7 @@
 
     <h2>Calculadora ROI</h2>
     <div class="calculadora">
-        <div>
+        <div class="hvr-ripple-out">
             <h3>Notas:</h3>
             <p>La calculadora de ROI te ayuda a saber cuánto dinero has ganado en relación con lo que inicialmente invertiste. Es una forma simple de medir si una inversión ha sido rentable o no. Un ROI positivo significa que ganaste más de lo que invertiste, mientras que un ROI negativo indica que la inversión no fue rentable.</p>
         </div>
@@ -100,11 +101,11 @@
                     <br/>
 
                     <label for="resetear"></label>
-                    <input type="reset" name="resetear" id="resetear" value="Resetear">
+                    <input type="reset" name="resetear" id="resetear" value="Resetear" class="hvr-shrink">
                     <br/>
                     <br/>
 
-                    <button type="button" onclick="calcularROI()">Calcular</button>
+                    <button type="button" onclick="calcularROI()" class="hvr-grow">Calcular</button>
                 </fieldset>
             </form>
         </div>

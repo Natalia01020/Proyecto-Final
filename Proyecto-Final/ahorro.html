@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahorro</title>
     <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="hover-min.css">
 </head>
 <body>
     <header>
@@ -17,7 +18,7 @@
     <h2>Calculadora de Ahorro</h2>
 
     <div class="calculadora">
-        <div>
+        <div class="hvr-ripple-out">
             <h3>Notas:</h3>
             <p>La calculadora de ahorro que he diseñado es una herramienta en línea que te ayuda a estimar cuánto dinero podrás ahorrar a lo largo del tiempo, basado en tu aporte mensual y la tasa de interés anual esperada. Aquí te dejo una descripción detallada de su funcionamiento y cómo usarla:</p>
         </div>
@@ -61,11 +62,11 @@
                     <br/>
 
                     <label for="resetear"></label>
-                    <input type="reset" name="resetear" id="resetear" value="Resetear">
+                    <input type="reset" name="resetear" id="resetear" value="Resetear" class="hvr-shrink">
                     <br/>
                     <br/>
                     
-                    <button type="button" onclick="CalcularAhorros()">Calcular</button>                  
+                    <button type="button" onclick="CalcularAhorros()" class="hvr-grow">Calcular</button>                  
                 </fieldset>
             </form>
         </div>
