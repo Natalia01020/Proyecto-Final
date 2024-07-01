@@ -8,8 +8,23 @@
 </head>
 <body>
 
+    <h2>Calculadora EVA</h2>
     <div class="calculadora">
-        <h2>Calculadora EVA</h2>
+        <div>
+            <h3>Notas:</h3>
+            <p>La Calculadora de Valor Económico Agregado (EVA) te ayuda a medir la rentabilidad de tu inversión. Ingresa la Utilidad Neta Operativa Después de Impuestos (NOPAT), el Capital Invertido y el Costo de Capital para obtener el EVA. Este indicador te muestra cuánto valor añadido genera tu inversión después de cubrir el costo del capital.</p>
+        </div>
+        <div>
+            <h3>Instrucciones:</h3>
+            <p>
+                <ol>
+                    <li><b>Utilidad Neta Operativa Después de Impuestos (NOPAT): </b>Ingresa la ganancia neta de tu inversión después de pagar los impuestos.</li>
+                    <li><b>Capital Invertido: </b>Indica cuánto dinero has invertido en tu proyecto o negocio.</li>
+                    <li><b>Costo de Capital (%): </b>Especifica el porcentaje que tu inversión debe superar para ser rentable.</li>
+                </ol>
+            </p>
+        </div>
+
         <div>
             <form id="eva">
                 <fieldset>
@@ -38,26 +53,30 @@
             <button type="button" onclick="calcularEVA()">Calcular</button>
                 </fieldset>
             </form>
-        </div>
-        <div>
-            <p id="resultadoEVA">Resultado EVA:</p>
-        </div>
+        </div>       
+    </div>
+    <div>
+        <p id="resultadoEVA"></p>
+    </div>
+
+
+    <h2>Calculadora ROI</h2>
+    <div class="calculadora">
         <div>
             <h3>Notas:</h3>
-            <p>La Calculadora de Valor Económico Agregado (EVA) te ayuda a medir la rentabilidad de tu inversión. Ingresa la Utilidad Neta Operativa Después de Impuestos (NOPAT), el Capital Invertido y el Costo de Capital para obtener el EVA. Este indicador te muestra cuánto valor añadido genera tu inversión después de cubrir el costo del capital.</p>
-            <h3>Instrucciones:</h3>
+            <p>La calculadora de ROI te ayuda a saber cuánto dinero has ganado en relación con lo que inicialmente invertiste. Es una forma simple de medir si una inversión ha sido rentable o no. Un ROI positivo significa que ganaste más de lo que invertiste, mientras que un ROI negativo indica que la inversión no fue rentable.</p>
+        </div>
+        <div>
+            <h3>Instrucciones:</h3>    
             <p>
                 <ol>
-                    <li><b>Utilidad Neta Operativa Después de Impuestos (NOPAT): </b>Ingresa la ganancia neta de tu inversión después de pagar los impuestos.</li>
-                    <li><b>Capital Invertido: </b>Indica cuánto dinero has invertido en tu proyecto o negocio.</li>
-                    <li><b>Costo de Capital (%): </b>Especifica el porcentaje que tu inversión debe superar para ser rentable.</li>
+                    <li><b>Costo de la inversión: </b>Ingresa el monto total que invertiste inicialmente.</li>
+                    <li><b>Ganancia obtenida: </b>Ingresa el beneficio total que has obtenido de la inversión.</li>
+                    <li>Haz clic en el botón <b>"Calcular"</b> para obtener el ROI, que se mostrará como un porcentaje.</li>
                 </ol>
             </p>
         </div>
-    </div>
 
-    <div class="calculadora">
-        <h2>Calculadora ROI</h2>
         <div>
             <form id="roiCalculator">
                 <fieldset>
@@ -82,22 +101,11 @@
                 </fieldset>
             </form>
         </div>
-        <div>
-            <p id="resultadoROI">Resultado:</p>
-        </div>
-        <div>
-            <h3>Notas:</h3>
-            <p>La calculadora de ROI te ayuda a saber cuánto dinero has ganado en relación con lo que inicialmente invertiste. Es una forma simple de medir si una inversión ha sido rentable o no. Un ROI positivo significa que ganaste más de lo que invertiste, mientras que un ROI negativo indica que la inversión no fue rentable.</p>
-            <h3>Instrucciones:</h3>    
-            <p>
-                <ol>
-                    <li><b>Costo de la inversión: </b>Ingresa el monto total que invertiste inicialmente.</li>
-                    <li><b>Ganancia obtenida: </b>Ingresa el beneficio total que has obtenido de la inversión.</li>
-                    <li>Haz clic en el botón <b>"Calcular"</b> para obtener el ROI, que se mostrará como un porcentaje.</li>
-                </ol>
-            </p>
-        </div>
     </div>
+        <div>
+            <p id="resultadoROI"></p>
+        </div>
+        
 
     <script src="script.js"></script>
 </body>
